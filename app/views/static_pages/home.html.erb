@@ -1,2 +1,8 @@
-<h1>StaticPages#home</h1>
-<p><%= link_to "Sign up", '/users/sign_up'%></p>
+<% if user_signed_in? %>
+<p>Signed in already</p>
+<% else %>
+<div class="center hero-unit">
+	<h1>StaticPages#home</h1>
+    <p><%= link_to "Sign up", '/users/sign_up', class: "btn btn-large btn-primary" %></p>
+</div>
+<% end %>
