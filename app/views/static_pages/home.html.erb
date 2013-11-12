@@ -1,5 +1,9 @@
 <% if user_signed_in? %>
 <p>Signed in already</p>
+      <ol class="microposts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
 <% else %>
 <div class="center hero-unit">
 	<h1>StaticPages#home</h1>
