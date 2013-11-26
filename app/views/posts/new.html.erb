@@ -1,7 +1,13 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_area :name, placeholder: "Name..." %>
+  </div>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Content..." %>
+  </div>
+  <div class="field">
+    <%= f.text_area :price, placeholder: "Price..." %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>
